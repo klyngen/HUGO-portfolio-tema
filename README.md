@@ -102,4 +102,6 @@ Du skal laste opp nettsiden din til en server. Derfor må du lage de nødvendige
 nettsiden din ligger nå i public/
 
 
-
+# Tilpass siden
+Det er nok lurt å tilpasse themes/layouts/index.html. Lag gjerne en Fork av arbeidet mitt, og vis meg gode forbedringer.
+Jeg er ikke noen mester på javascript.
