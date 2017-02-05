@@ -1,6 +1,6 @@
 # HUGO-portfolio-tema
 Et enkelt tema laget for HUGO
-![Hjemmeside](documentation)/side.png)
+![Hjemmeside](documentation/side.png)
 
 
 # Hva er HUGO?
@@ -59,7 +59,7 @@ paral er en forkortelse for paralax. Det er bakgrunnsbildene som scroller med vi
 ### card1, 2, 3, 4
 Disse er kortene som befinner seg på siden. Disse bildene setter du også opp.
 
-![cards](documentation/card.png)
+![cards](documentation/cards.png)
 
 ### Bildelokasjon
 Alle bildene i konfigurasjonsfila må ligge i mappen med navn "static". Hvis ikke dukker de ikke opp på siden.
