@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+    {{ partial "header.html" .}}
+    <script type="text/javascript">
+      setActive("blogg");
+    </script>
+    <body>
+        {{ partial "nav.html" .}}
+        <script type="text/javascript">setActive("blog");</script>
+        <style media="screen">
+          .tittelen {
+            !font-size: 60px;
+          }
+        </style>
+        <a href="#" class="image featured">{{if isset .Params "featured_image" }}
+          <img id="toppbilde" src="{{ index .Params "featured_image" }}"></a>{{ end }}
+        <div class="innlegget">
+          <div class="container">
+            {{ .Date.Format "Mon, Jan 2, 2006" }}
+            <h1 id="posttittel">{{ .Scratch.Get "title"}}</h1>
+            <div class="linje"></div>
+            <div class="tekst">
+              <div class="featured">
+                <p class="lead">{{ .Description}}</p>
+              </div>
+
+              {{ .Content}}
+            </div>
+
+          </div>
+        </div>
+
+        {{ partial "footer.html" .}}
+    <body>
+</html>

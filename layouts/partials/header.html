@@ -1,0 +1,19 @@
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        {{ .Scratch.Add "title" "" }}{{ if isset .Site.Data.titles .Title }}{{ .Scratch.Set "title" (index .Site.Data.titles .Title).title }}{{ else }}{{ .Scratch.Set "title" .Title}}{{end}}
+        <title>{{ .Scratch.Get "title" }}</title>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <link rel="icon" href="{{ .Site.BaseURL}}/img/ico.png">
+        <script src="{{ .Site.BaseURL}}/js/main.js"</script>
+        <script src="{{ .Site.BaseURL}}/js/jquery_002.js"></script>
+        <script src="{{ .Site.BaseURL}}/js/jquery.js"></script>
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/bootstrap.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="{{ .Site.BaseURL}}/js/bootstrap.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{{ .Site.Params.description}}">
+        <meta name="keywords" content="{{ .Site.Params.keywords}}">
+        <meta name="author" content="{{ .Site.Author}}">
+        <meta name="theme-color" content="#333">
+</head>

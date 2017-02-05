@@ -1,0 +1,356 @@
+
+ .navListe li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.navigasjon h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.navigasjon ul li {
+  list-style-type: none;
+}
+
+.navigasjon li a {
+  margin: 30px;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: bold;
+  margin-left: 20px;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v11/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
+}
+
+body {
+  background: rgba(30, 30, 30,1);
+}
+
+.titleline h1 {
+  float: left;
+}
+
+.titleline li {
+  float: left;
+}
+
+.ommeg img {
+    border-style: solid;
+    border-color: white;
+    border-width: 4px;
+}
+
+.ommeg h1 {
+
+    font-weight: bolder;
+    font-size: 60px;
+
+}
+
+.ommeg {
+
+    color: white;
+
+background: rgba(30, 30, 30,1);
+padding-bottom: 30px;
+}
+
+.ommeg .lead {
+    border-left-style: solid;
+    border-color: white;
+    border-width: 3px;
+}
+
+.ommeg .lead p {
+    margin-bottom: 25px;
+}
+
+.ommeg .lead span {
+    position: relative;
+    left: -5px;
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .navigasjon ul li a {
+    margin: 10px;
+  }
+
+
+  .titleline h1 {
+    float: none;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .navigasjon ul li a {
+    margin: 5px;
+  }
+
+  .titleline li {
+    float:left;
+  }
+  .titleline h1 {
+    float: none;
+  }
+}
+
+
+.tekst2 {
+    background: rgba(30, 30, 30, 1);
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+.tekst3 {
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.tekst3 h3{
+    color: #333;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.thumbnail {
+  display: block;
+  background-color: rgb(230, 230, 230);
+}
+
+.paral1 h1 {
+    margin: 0px;
+    display: block;
+    text-align: center;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #DDDEFF;
+    padding: 5px;
+}
+.paral2 h1 {
+    margin: 0px;
+    display: block;
+    text-align: center;
+    background-color: rgba(30, 30, 30, 0.8);
+    color: #DDDEFF;
+    padding: 5px;
+}
+
+#tidslinje {
+    margin-top: 20px;
+}
+
+#meg {
+    margin-top: 20px;
+}
+
+.blue {
+  font-weight: bold;
+  color: white;
+  font-family: 'Oswald';
+  font-style: normal;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v11/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
+}
+
+.blue2 {
+  display: block;
+  background-color: white;
+  padding: 5px;
+  color: #333;
+  font-weight: bold;
+  font-family: 'Oswald';
+  font-style: normal;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v11/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
+}
+
+.lead h3 {
+  font-weight: bold;
+}
+
+.caption h3 {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: bold;
+  margin-left: 20px;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v11/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
+
+}
+
+.osw {
+  font-family: 'Oswald';
+  font-style: normal;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v11/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
+}
+
+.col-md-4 pre {
+    padding: 0px;
+    height: 30px;
+    line-heigt: 20px;
+}
+
+code {
+    padding: 5px;
+}
+
+.innlegget {
+  background-color: rgb(230, 230, 230);
+  display: block;
+  margin-top: 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.featured .image img {
+  width: 100%;
+}
+
+#topbilde {
+  width: 100%
+}
+.tekst h3 {
+  color: #333;
+}
+
+.tekst h4 {
+  color: #333;
+}
+
+.tekst h5 {
+  color: #333;
+}
+.innlegget .tekst h1, h3, h2, h4 {
+  font-family: 'Oswald';
+  color: #333;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v11/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
+}
+
+.tekst {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.tekst img {
+  width: 100%;
+}
+
+.tekst #tittelen {
+  font-size: 65px;
+  text-transform: uppercase;
+}
+#posttittel {
+  font-family: 'Oswald';
+  font-size: 60px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.linje {
+  border-top-style: solid;
+  border-color: #333;
+  margin-bottom: 50px;
+}
+
+#footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.post  {
+  margin: 20px;
+  border-radius: 5px;
+  display: block;
+  border-width: 5px;
+  border-color: #444;
+  display: block;
+  background-color: rgb(230, 230, 230);
+}
+
+.post h3  {
+  text-align: center;
+  display: block;
+  background-color: #222;
+  color: white;
+  font-weight: bold;
+  padding: 9px;
+  font-size: 45px;
+  margin: 0px;
+}
+
+.post .desc {
+  display: block;
+  text-align: center;
+  background-color: #222;
+  font-size: 20px;
+  font-family: oswald;
+  padding: 10px;
+  color: white;
+  margin: 0px;
+  padding: 4px;
+}
+
+.postliste {
+  display: block;
+  background-color: rgb(230, 230, 230);
+}
+
+
+#footer p, h3 {
+  color: white;
+}
+
+#topbilde {
+  width: 70%;
+}
+#toppbilde {
+  width: 100%;
+}
+
+.postliste h1, h3, h4, h5 {
+ font-family: oswald;
+}
+
+.postliste {
+  padding-bottom: 50px;
+}
+
+.vanskelig {
+  color: inherit;
+}
+
+.postliste a h1 {
+  color: #333;
+}
+
+.bildeteksten img {
+  max-width: 90%;
+}
+
+.text3 .col-xs-6 {
+  height: 100%;
+}
+
+#card {
+  height: 100%;
+}
+
+.postliste .bildebe h1{
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  display: block;
+  background-color: #222;
+  color: white;
+  margin-bottom: 0px;
+  padding: 9px;
+  width: 70%;
+}

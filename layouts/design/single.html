@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    {{ partial "header.html" .}}
+  <body>
+    {{ partial "nav.html" .}}
+    <script type="text/javascript">setActive("design");</script>
+    <div class="postliste">
+        {{if isset .Params "featured_image" }}
+        <img id="toppbilde" src="{{ index .Params "featured_image" }}">
+            {{ end }}
+          <div class="container">
+            <div id="bt" class="bildeteksten">
+                {{ .Date.Format "Mon, Jan 2, 2006" }}
+              <h1 class="osw">{{ .Title }}</h1>
+              <h3 class="vanskelig">{{ .Description}}</h3>
+              <div class="linje"></div>
+            {{ .Content}}
+            </div>
+          </div>
+
+</div>
+    {{ partial "footer.html" .}}
+  </body>
+</html>
