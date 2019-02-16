@@ -1,0 +1,116 @@
+h1, h2, h3, p, blockquote {
+    color: white;
+}
+
+html {
+    scroll-behaviour: smooth;
+}
+
+.contentMain img {
+}
+
+#featured-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: -1;
+}
+@media (max-aspect-ratio: 16/9) {
+
+}
+
+@media only screen and (max-aspect-ratio: 3/2) {
+    #featured-image {
+        height: 100vh;
+        width: auto;
+    }
+
+    #meg {
+        margin-left: 0px;
+    }
+
+    .select-arrow {
+        font-size: 15vw;
+        bottom: 100px;
+        position: fixed;
+        left: 45vw;
+        font-weight: 0;
+        z-index: -1;
+        color: white;
+    }
+
+    div.select-arrow.next-arrow {
+        bottom: 1vh;
+    }
+
+    div.select-arrow.prev-arrow {
+        top: 1vh;
+        display: none;
+    }
+}
+
+
+.about-content {
+    margin-top: 100vh;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 20px 5vw 20px 5vw;
+}
+
+.about-content.last {
+    margin-bottom: 30vh;
+}
+
+.ommeg img {
+    border-style: solid;
+    border-color: white;
+    border-width: 4px;
+    margin-left: 30px;
+}
+
+.ommeg h1 {
+
+    font-weight: bolder;
+    font-size: 60px;
+
+}
+
+.ommeg {
+
+}
+
+.ommeg .row {
+    color: white;
+    /*background: rgba(30, 30, 30,1);*/
+    padding: 30px;
+}
+
+
+.ommeg .col-md-3 {
+    backface-visibility: hidden;
+}
+
+.select-arrow {
+    font-size: 10vw;
+    position: fixed;
+    right: 40px;
+    font-weight: 600;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+.select-arrow.next-arrow {
+    bottom: -9vh;
+}
+
+.select-arrow.prev-arrow {
+    top: 1vh;
+    display: none;
+}
+
+
+.select-arrow i {
+    font-weight: 600;
+    cursor: pointer;
+}

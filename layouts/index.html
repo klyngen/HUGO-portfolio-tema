@@ -1,144 +1,94 @@
 <!DOCTYPE html>
 <html>
     {{ partial "header.html" .}}
+
     <body>
         {{ partial "nav.html" .}}
-        <script type="text/javascript">setActive("home");</script>
-        <style media="screen">
-        .paral1 {
-            background-image: url("{{.Site.BaseURL}}{{ .Site.Params.paral1}}");
-            height: 400px;
 
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .paral2 {
-            background-image: url("{{.Site.BaseURL}}{{ .Site.Params.paral2}}");
-            background-image-size: 100% 100%;
-            height: 600px;
 
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        </style>
-        <div class="ommeg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="{{ .Site.Params.selvportrett}}" class="img-circle" id="meg" width="300px">
+
+        <div onclick="previousPart()" class="select-arrow prev-arrow">
+            <i class="fas fa-angle-up"></i>
+        </div>
+        
+        <img id="featured-image" src="{{ index .Params "featured" }}">
+
+        <div class="ommeg about-content"
+             data-aos-offset="200"
+             data-aos-easing="ease-in-out"
+             data-aos="fade-right">
+            <div id="firstrow" class="row">
+                <div class="col-md-6 col-sm-6 col-lg-3">
+                    <img src="{{ .Site.Params.selvportrett}}" class="img-circle" id="meg" width="300px">
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-6 grey-back">
+                    <div class="lead" id="tidslinje">
+                        {{range .Params.tidslinje}}
+                        <span class="glyphicon glyphicon-minus"><b class="osw">{{index . 0}}</b> </span> {{index . 1}} </p>
+                        {{end}}
                     </div>
-
-                    <div class="col-md-8">
-                        <div class="lead" id="tidslinje">
-                            <p><span class="glyphicon glyphicon-minus"> </span><b class="osw">1996</b> Født på Lillehammer</p>
-                            <p><span class="glyphicon glyphicon-minus"> </span><b class="osw">2014</b> Starter bandet Blueshift</p>
-                            <p><span class="glyphicon glyphicon-minus"> </span><b class="osw">2015</b> Avsluttet videregående - Studiespesialisering</p>
-                            <p><span class="glyphicon glyphicon-minus"> </span><b class="osw">2015</b> Startet skolegangen på NTNU Gjøvik - Programmvareutvikling</p>
-                            <p><span class="glyphicon glyphicon-minus"> </span><b class="osw">2015</b> Begynte som bassist for Badegjestene</p>
-                            <p><span class="glyphicon glyphicon-minus"> </span><b class="osw">2016</b> Flyttet til Gjøvik</p>
-
-                        </div>
-                    </div>
+                </div>
+                <div class="col-md-3 col-3">
+                    
                 </div>
             </div>
         </div>
 
-        <div class="paral1">
-            <h1 class="blue">Konsert Bandgruppa NTNU Gjøvik </h1>
+        <div class="container-fluid contentMain">
+            {{.Content}}
         </div>
-    <div class="tekst2">
-        <div class="container" id="text2">
-            <div class="lead">
-                <h1 class="blue">Engasjement i musikken</h1>
-                <h3 class="blue2">Blueshift</h3>
-                <p>Siden 2012, har Martin Klingenberg spilt sammen med Kristoffer Ulven. Sammen startet
-                    de Blueshift. Bandet spilte blues, rock, pop og hadde mange spillejobber i Lillehammerområdet.
-                    Bandet debuterte første gang på Felix, med et nesten tomt lokale. Bandet hadde sin siste spillejobb
-                    i 2016 på Mikrobryggeriet på Lillehammer; det ble den tredje og siste spillejobben der.
-                </p>
-                <h3 class="blue2">Badegjestene</h3>
-                <p>Badegjestene er et student-partyband basert på Gjøvik. Denne gjengen
-                    har et reportoar med sanger folk kan utenatt. Bandet debuterte 5. Mai 2016 på
-                    HUSET (Studenthuset på Gjøvik). Siden har de utvidet repertoaret og spilt på
-                    Bandgruppa NTNU sitt arrangement 11. november 2016. Stødig band med Martin Johansen
-                    på Trommer, Martin Sandberg på Keyes, Eirik Aarskog på Gitar sammen med Torjus Aamild
-                    og sist men ikke minst Anders Paalgård som vokalist </p>
-                <h3 class="blue2">Bandgruppa NTNU - Gjøvik</h3>
-                <p>For å hjelpe andre studenter på Gjøvik dannet medlemmer fra bandgruppa en forening
-                    som organiserte øvinger og konserter for medstudenter. Dette tiltaket startet i mai 2016, og
-                    gikk fra å være en forening uten medlemmer og utstyr til en godt organisert gruppe på et halvt år.
-                    Martin Klingenberg hadde et styreverv, og var økonomiansvarlig. Foreningens styre var for det meste
-                bestående av medlemmer fra badegjestene.</p>
-            </div>
 
-        </div>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+     AOS.init();
+    </script>
+
+    <div data-aos="fade-up" class="about-content last">{{ partial "footer.html" .}}</div>
+    <div class="select-arrow next-arrow">
+        <i onclick="nextPart()" class="fas fa-angle-down"></i>
     </div>
+    <script>
+     var aboutMeParts = $('.about-content').toArray();
+     aboutMeParts.unshift($('.navigasjon')[0]);
+     var next = aboutMeParts[1];
+     var prev = aboutMeParts[aboutMeParts.length - 1];
+     var scrollSettings = {behavior: "smooth", block: "center", inline: "nearest"}
 
 
-<div class="paral2">
-    <h1 class="blue">Deler av bandgruppa sitt styre under fadderuka 2016 </h1>
-</div>
+     function nextPart() {
+         next.scrollIntoView(scrollSettings);
+         let index = aboutMeParts.indexOf(next) + 1;
+         if (index < aboutMeParts.length) {
+             next = aboutMeParts[index];
+         } else {
+             prev = next;
+             next = aboutMeParts[0];
+         }
+     }
 
-    <div class="tekst3">
-        <div class="container-fluid" id="text2">
-            <h1 class="blue">Programmering</h1>
-            <div class="row">
-                <div id="card" class=" col-xs-6 col-sm-3">
-                    <div class="thumbnail">
-                        <img src="{{ .Site.Params.card1}}" height="180px">
-                        <div class="caption">
-                            <h3>C++</h3>
-                            <p>Lærte meg grunnleggende C++ på NTNU Gjøvik.
-                            Har brukt c++ i faget algoritmiske metoder og til egen utvikling.</p>
-                        </div>
-                    </div>
-                </div>
+     function previousPart() {
+         console.log(prev);
+         prev.scrollIntoView(scrollSettings);
+         let index = aboutMeParts.indexOf(prev) -1;
+         if (index < 0) {
+             prev = aboutMeParts[aboutMeParts.length-1];
+         } else {
+             next = prev;
+             prev = aboutMeParts[index];
+         }
 
-                 <div class=" col-xs-6 col-sm-3">
-                    <div class="thumbnail">
-                        <img src="{{ .Site.Params.card2}}" height="180px">
-                        <div class="caption">
-                            <h3>Python</h3>
-                            <p>Python var det første språket jeg lærte meg. Dette språket lærte jeg på
-                            egen hånd når jeg gikk på videregående. Det språket jeg bruker når noe skal løses raskt</p>
-                        </div>
-                    </div>
-                </div>
+     }
 
-                <div class=" col-xs-6 col-sm-3">
-                    <div class="thumbnail">
-                        <img src="{{ .Site.Params.card3}}" height="180px">
-                        <div class="caption">
-                            <h3>Web-språk</h3>
-                            <p>Jeg har opparbeidet meg mye erfaring med HTML, CSS og PHP. PHP Har jeg
-                            lært i sammenheng med databaser på NTNU Gjøvik, mens de andre er lært gjennom prøving og feiling</p>
-                        </div>
-                    </div>
-                </div>
+     window.addEventListener('scroll', function (event) {
+         if (window.scrollY >= window.screen.availHeight) {
+$(".prev-arrow").fadeIn('slow');
+         } else {
+$(".prev-arrow").fadeOut('slow');
+         }
+     });
 
-
-                <div class=" col-xs-6 col-sm-3">
-                    <div class="thumbnail">
-                        <img src="{{ .Site.Params.card4}}" height="180px">
-                        <div class="caption">
-                            <h3>Linux</h3>
-                            <p>Jeg ble tidlig eksponert for Linux som barn. Var ikke gamle gutten da jeg for
-                            første gang brukte redhat. Dagen i dag er jeg en vant linuxbruker</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-            </div>
-
-        </div>
-    </div>
-    {{ partial "footer.html" .}}
+    </script>
 </body>
 </html>

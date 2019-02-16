@@ -3,11 +3,11 @@
 <html>
     {{ partial "header.html" .}}
     <script type="text/javascript">
-      setActive("blogg");
+     setActive("programvare");
     </script>
     <body>
         {{ partial "nav.html" .}}
-        <script type="text/javascript">setActive("blog");</script>
+        <script type="text/javascript">setActive("programvare");</script>
         <style media="screen">
           .tittelen {
             !font-size: 60px;
@@ -21,6 +21,7 @@
           <div class="container">
             {{ .Date.Format "Mon, Jan 2, 2006" }}
             <h1 id="posttittel">{{ .Scratch.Get "title"}}</h1>
+            <h2>{{ .Params.subtitle }}</h2>
             <div class="linje"></div>
             <div class="tekst">
               <div class="featured">

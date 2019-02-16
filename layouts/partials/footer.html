@@ -1,23 +1,47 @@
     <div class="container">
         <div id="footer" class="row">
             <div class="col-md-4">
-                <h3 class="osw">Kontakt</h3>
-                <p>martin punktum klingenberg at stud punktum ntnu punktum no</p>
-                <p>Eller bruk internett. Jeg som de fleste andre er på facebook</p>
+                <h3 class="osw">Kontakt meg</h3>
+                <h2>
+                    {{ if isset .Site.Params "linkedin"}}
+                    <a href="{{ .Site.Params.linkedin}}">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    {{ end }}
+
+                    
+                    {{ if isset .Site.Params "github"}}
+                    <a href="{{ .Site.Params.github}}">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    {{ end }}
+
+                    {{ if isset .Site.Params "email"}}
+                    <script>
+                     function assembleEmail(first, last) {
+                         console.log(first, last);
+                       document.getElementById('hoverEmail').href = 'mailto:' + first + '@' + last;
+                     }
+                    </script>
+                    <a id="hoverEmail" onmouseover="assembleEmail('{{ index .Site.Params "email" 0}}', '{{ index .Site.Params "email" 1}}')" href="mailto:gotohell@robot.shit">
+                        <i class="fas fa-at"></i>
+                    </a>
+                    {{ end }}
+
+                </h2>
             </div>
             <div class="col-md-4">
                 <h3 class="osw">Denne siden</h3>
-                <p>Denne siden er statisk. Den er generert av <a href="http://www.gohugo.io" target="_blank">HUGO</a></p>
-                <p>Om du liker siden, kan du laste ned en duplikat og gjøre den til din egen</p>
+                <p>Om du liker den, så er temaet tilgjengelig på github</p>
                     <code>git clone https://github.com/klyngen/HUGO-portfolio-tema/</code>
             </div>
 
             <div class="col-md-4">
-                <h3 class="osw">Oppsett</h3>
-                <p>Intaller HUGO til ditt operativsystem</p>
-                <p>Skriv <code>hugo</code> i din terminal </p>
-                <p>Kopier innholder fra public/ til ditt nettsted</p>
+                <h3 class="osw">Vil du ha en lignende side?</h3>
+                <p>
+                    Spør veldig pent...
+                    Koster omtrent en kasse øl
+                </p>
             </div>
-
         </div>
     </div>

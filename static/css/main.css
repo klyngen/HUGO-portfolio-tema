@@ -40,6 +40,7 @@ body {
   float: left;
 }
 
+/*
 .ommeg img {
     border-style: solid;
     border-color: white;
@@ -60,6 +61,7 @@ body {
 background: rgba(30, 30, 30,1);
 padding-bottom: 30px;
 }
+*/
 
 .ommeg .lead {
     border-left-style: solid;
@@ -210,8 +212,9 @@ code {
   padding-bottom: 50px;
 }
 
-.featured .image img {
-  width: 100%;
+.image-container {
+    max-height: 60vh;
+    overflow: hidden;
 }
 
 #topbilde {
@@ -301,6 +304,7 @@ code {
 .postliste {
   display: block;
   background-color: rgb(230, 230, 230);
+  min-height: 60vh;
 }
 
 
@@ -313,6 +317,7 @@ code {
 }
 #toppbilde {
   width: 100%;
+  
 }
 
 .postliste h1, h3, h4, h5 {
